@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<AME>
+	<item>
+		<id>40</id>
+		<title>Vimeo</title>
+		<description>Embed Vimeo.com Videos!</description>
+		<displayorder>1</displayorder>
+		<findcode><![CDATA[http://[w\.]*vimeo\.com/([0-9]+)[&\w;=?+_\-%\/]*]]></findcode>
+		<replacecode><![CDATA[<object type="application/x-shockwave-flash" width="$ameinfo[width]" height="$ameinfo[height]" data="http://vimeo.com/moogaloop.swf?clip_id=$p1&amp;server=vimeo.com&amp;fullscreen=1&amp;video_info=1">	<param name="quality" value="best"><param name="allowfullscreen" value="true"><param name="scale" value="showAll"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=$p1&amp;server=vimeo.com&amp;fullscreen=1&amp;video_info=1"></object>]]></replacecode>
+		<status>1</status>
+		<container>1</container>
+		<embedregexp />
+		<extraction>1</extraction>
+		<gdef>0</gdef>
+		<ameid>vimeo</ameid>
+		<validation />
+	</item>
+</AME>

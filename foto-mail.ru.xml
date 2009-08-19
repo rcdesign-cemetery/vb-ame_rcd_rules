@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<AME>
+	<item>
+		<id>31</id>
+		<title>Foto@Mail.ru</title>
+		<description>Embed photo from mail.ru albums</description>
+		<displayorder>0</displayorder>
+		<findcode><![CDATA[http://foto\.mail\.ru/([\w+-/]+)/(\d+).html]]></findcode>
+		<replacecode><![CDATA[<a href="$p0" target="_blank" rel="nofollow"><img class="thumbnail" border="0" src="http://content.foto.mail.ru/$p1/p-$p2.jpg" rel="nofollow"></a>]]></replacecode>
+		<status>1</status>
+		<container>0</container>
+		<embedregexp />
+		<extraction>0</extraction>
+		<gdef>0</gdef>
+		<ameid>foto_mailru</ameid>
+		<validation />
+	</item>
+</AME>

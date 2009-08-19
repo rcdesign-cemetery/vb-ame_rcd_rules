@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<AME>
+	<item>
+		<id>32</id>
+		<title>Google Maps</title>
+		<description>Embed Google Maps</description>
+		<displayorder>0</displayorder>
+		<findcode><![CDATA[http://maps\.google\.[\w]+/maps.*]]></findcode>
+		<replacecode><![CDATA[<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{$p0}&amp;output=embed"></iframe>]]></replacecode>
+		<status>1</status>
+		<container>1</container>
+		<embedregexp />
+		<extraction>0</extraction>
+		<gdef>0</gdef>
+		<ameid>google_maps</ameid>
+		<validation />
+	</item>
+</AME>

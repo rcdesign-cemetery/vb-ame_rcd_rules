@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<AME>
+	<item>
+		<id>35</id>
+		<title>Meta Cafe</title>
+		<description>Embed MetaCafe.com Videos!</description>
+		<displayorder>1</displayorder>
+		<findcode><![CDATA[[http://]*[a-z]*?[\.]?metacafe\.com/watch/([0-9]+/[a-z0-9_]*)[&a-z0-9;=\+_\-\/]*]]></findcode>
+		<replacecode><![CDATA[<embed src="http://www.metacafe.com/fplayer/$p1.swf" width="$ameinfo[width]" height="$ameinfo[height]" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed>]]></replacecode>
+		<status>1</status>
+		<container>1</container>
+		<embedregexp />
+		<extraction>1</extraction>
+		<gdef>0</gdef>
+		<ameid>meta_cafe</ameid>
+		<validation />
+	</item>
+</AME>

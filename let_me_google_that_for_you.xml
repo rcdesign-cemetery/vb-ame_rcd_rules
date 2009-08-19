@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<AME>
+	<item>
+		<id>34</id>
+		<title>Let me google that for you :)</title>
+		<description>Funny google searsh results rederect</description>
+		<displayorder>0</displayorder>
+		<findcode><![CDATA[http://www\.google\.[\w]+/search\?.+(?:&|&amp;)(q=[\w\d%+]+).*]]></findcode>
+		<replacecode><![CDATA[<a href="http://letmegooglethatforyou.com/?{$p1}" target="_blank" rel="nofollow">google rulezzz!!!</a>]]></replacecode>
+		<status>1</status>
+		<container>0</container>
+		<embedregexp />
+		<extraction>0</extraction>
+		<gdef>0</gdef>
+		<ameid>letmegooglethatforyou</ameid>
+		<validation />
+	</item>
+</AME>

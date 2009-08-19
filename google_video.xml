@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<AME>
+	<item>
+		<id>33</id>
+		<title>Google Video</title>
+		<description><![CDATA[Converts Google.com Videos! <b>(Google Hosted Only)</b>]]></description>
+		<displayorder>1</displayorder>
+		<findcode><![CDATA[[http://]*video\.google\.[\w.]+/videoplay\?docid=([-\d]+)[&\w;=\+_-]*]]></findcode>
+		<replacecode><![CDATA[<embed style="width:$ameinfo[width]px; height:$ameinfo[height]px;" id="VideoPlayback" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=$p1" flashvars="" wmode="transparent"> </embed>]]></replacecode>
+		<status>1</status>
+		<container>1</container>
+		<embedregexp />
+		<extraction>1</extraction>
+		<gdef>0</gdef>
+		<ameid>google_video</ameid>
+		<validation />
+	</item>
+</AME>
