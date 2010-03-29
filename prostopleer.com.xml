@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<AME>
+	<item>
+		<id>44</id>
+		<title>ProstoPleer</title>
+		<description>Embed prostppleer.com mp3 pleer</description>
+		<displayorder>0</displayorder>
+		<findcode><![CDATA[http://prostopleer\.com/tracks/([\w]+)]]></findcode>
+		<replacecode><![CDATA[<object width="411" height="28"><param name="movie" value="http://embed.prostopleer.com/track?id=$p1"></param><embed src="http://embed.prostopleer.com/track?id=$p1" type="application/x-shockwave-flash" width="411" height="28"></embed></object>]]></replacecode>
+		<status>1</status>
+		<container>0</container>
+		<embedregexp />
+		<extraction>0</extraction>
+		<gdef>0</gdef>
+		<ameid>prostopleer</ameid>
+		<validation />
+	</item>
+</AME>
