@@ -2,21 +2,6 @@
 
 <AME>
 	<item>
-		<id>43</id>
-		<title>YouTube (Playlists)</title>
-		<description>Embed YouTube.com Playlists!</description>
-		<displayorder>1</displayorder>
-		<findcode><![CDATA[http://[\w]+\.youtube\.com/view_play_list\?p=([\w]+)]]></findcode>
-		<replacecode><![CDATA[<object width="$ameinfo[width]" height="$ameinfo[height]"><param name="movie" value="http://www.youtube.com/p/$p1"></param><param name="background" value="transparent"></param><embed src="http://www.youtube.com/p/$p1" type="application/x-shockwave-flash" width="$ameinfo[width]" height="$ameinfo[height]" wmode="transparent"></embed></object>]]></replacecode>
-		<status>1</status>
-		<container>1</container>
-		<embedregexp />
-		<extraction>1</extraction>
-		<gdef>0</gdef>
-		<ameid>youtube_playlists</ameid>
-		<validation />
-	</item>
-	<item>
 		<id>42</id>
 		<title>YouTube (HQ/HD)</title>
 		<description><![CDATA[Embed YouTube.com High Quality and High Definition Videos <b>(fmt=18& or fmt=22&)</b>]]></description>
@@ -202,6 +187,21 @@
 		<extraction>0</extraction>
 		<gdef>0</gdef>
 		<ameid>foto_mailru</ameid>
+		<validation />
+	</item>
+	<item>
+		<id>44</id>
+		<title>ProstoPleer</title>
+		<description>Embed prostppleer.com mp3 pleer</description>
+		<displayorder>0</displayorder>
+		<findcode><![CDATA[http://prostopleer\.com/tracks/([\w]+)]]></findcode>
+		<replacecode><![CDATA[<object width="411" height="28"><param name="movie" value="http://embed.prostopleer.com/track?id=$p1"></param><embed src="http://embed.prostopleer.com/track?id=$p1" type="application/x-shockwave-flash" width="411" height="28"></embed></object>]]></replacecode>
+		<status>1</status>
+		<container>0</container>
+		<embedregexp />
+		<extraction>0</extraction>
+		<gdef>0</gdef>
+		<ameid>prostopleer</ameid>
 		<validation />
 	</item>
 </AME>
