@@ -2,17 +2,14 @@
 
 <AME3>
 	<def>
-		<providerid>1</providerid>
-		<tagoption>hulu</tagoption>
-		<provider>Hulu</provider>
-		<url>http://www.hulu.com</url>
-		<regex_url>http:\/\/www\.hulu\.com\/watch\/</regex_url>
-		<regex_scrape><![CDATA[<link rel="video_src" href="http://www.hulu.com/embed/([^"]+)"]]></regex_scrape>
-		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="512" height="296" data="http://www.hulu.com/embed/{vb:raw code}">
-	<param name="movie" value="http://www.hulu.com/embed/{vb:raw code}" />
-	<param name="wmode" value="transparent" />
-</object>]]></embed>
-		<priority>0</priority>
+		<providerid>10</providerid>
+		<tagoption>fotorambler</tagoption>
+		<provider>Рамблер Фото</provider>
+		<url>http://foto.rambler.ru/</url>
+		<regex_url><![CDATA[http:\/\/foto\.rambler\.ru\/users\/[\w+\-]+\/\d+\/[\w+\-]+\/]]></regex_url>
+		<regex_scrape><![CDATA[var inpicpreview='http://foto.rambler.ru/public/([\w+\-/]+)-prev\.jpg';]]></regex_scrape>
+		<embed><![CDATA[<a href="{vb:raw url}" target="_blank"><img src="http://foto.rambler.ru/public/{vb:raw code}-prev.jpg" target="_blank" rel="nofollow"></a>]]></embed>
+		<priority>50</priority>
 	</def>
 	<def>
 		<providerid>2</providerid>
@@ -21,11 +18,12 @@
 		<url>http://www.youtube.com</url>
 		<regex_url><![CDATA[http:\/\/www\.youtube\.com\/watch\?.*v=([a-z0-9-_]+)]]></regex_url>
 		<regex_scrape />
-		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="640" height="385" data="http://www.youtube.com/v/{vb:raw code}">
-	<param name="movie" value="http://www.youtube.com/v/{vb:raw code}" />
+		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="640" height="385" data="http://www.youtube.com/v/{vb:raw code}&fs=1">
+	<param name="movie" value="http://www.youtube.com/v/{vb:raw code}&fs=1" />
 	<param name="wmode" value="transparent" />
+	<param name="allowFullScreen" value="true" />
 </object>]]></embed>
-		<priority>0</priority>
+		<priority>1</priority>
 	</def>
 	<def>
 		<providerid>3</providerid>
@@ -37,21 +35,19 @@
 		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="640" height="360" data="http://vimeo.com/moogaloop.swf?clip_id={vb:raw code}">
 	<param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id={vb:raw code}" />
 	<param name="wmode" value="transparent" />
+	<param name="allowfullscreen" value="true" />
 </object>]]></embed>
-		<priority>0</priority>
+		<priority>5</priority>
 	</def>
 	<def>
-		<providerid>4</providerid>
-		<tagoption>dailymotion</tagoption>
-		<provider>Dailymotion</provider>
-		<url>http://www.dailymotion.com</url>
-		<regex_url><![CDATA[http:\/\/www\.dailymotion\.com(?:\/[^\/]+)?\/video\/([a-z0-9]+)]]></regex_url>
+		<providerid>8</providerid>
+		<tagoption>googlemaps</tagoption>
+		<provider>Google Maps</provider>
+		<url>http://maps.google.com</url>
+		<regex_url>http:\/\/maps\.google\.(?:com|ru)\/maps(.)(.*)</regex_url>
 		<regex_scrape />
-		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="420" height="339" data="http://www.dailymotion.com/swf/{vb:raw code}">
-	<param name="movie" value="http://www.dailymotion.com/swf/{vb:raw code}" />
-	<param name="wmode" value="transparent" />
-</object>]]></embed>
-		<priority>0</priority>
+		<embed><![CDATA[<iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{vb:raw url}&amp;output=embed"></iframe><br /><small><a href="{vb:raw url}" target="_blank">Просмотреть увеличенную карту</a></small>]]></embed>
+		<priority>20</priority>
 	</def>
 	<def>
 		<providerid>5</providerid>
@@ -63,34 +59,94 @@
 		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="400" height="345" data="http://www.metacafe.com/fplayer/{vb:raw code}.swf">
 	<param name="movie" value="http://www.metacafe.com/fplayer/{vb:raw code}.swf" />
 	<param name="wmode" value="transparent" />
+	<param name="allowFullScreen" value="true" />
 </object>]]></embed>
-		<priority>0</priority>
+		<priority>35</priority>
 	</def>
 	<def>
 		<providerid>6</providerid>
 		<tagoption>google</tagoption>
-		<provider>Google</provider>
+		<provider>Google Video</provider>
 		<url>http://video.google.com</url>
 		<regex_url><![CDATA[http:\/\/video\.google\.com\/videoplay\?docid=([0-9\-]+)]]></regex_url>
 		<regex_scrape />
 		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="400" height="326" data="http://video.google.com/googleplayer.swf?docid={vb:raw code}">
 	<param name="movie" value="http://video.google.com/googleplayer.swf?docid={vb:raw code}" />
 	<param name="wmode" value="transparent" />
+	<param name="allowFullScreen" value="true" />
 </object>]]></embed>
-<embed><![CDATA[<embed style="width:$ameinfo[width]px; height:$ameinfo[height]px;" id="VideoPlayback" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=$p1" flashvars="" wmode="transparent"> </embed>]]></embed>
-		<priority>0</priority>
+		<priority>55</priority>
 	</def>
 	<def>
-		<providerid>7</providerid>
-		<tagoption>facebook</tagoption>
-		<provider>facebook</provider>
-		<url>http://www.facebook.com</url>
-		<regex_url><![CDATA[http:\/\/www\.facebook\.com\/video\/video.php\?v=([0-9]+)]]></regex_url>
+		<providerid>9</providerid>
+		<tagoption>fotomailru</tagoption>
+		<provider>Фото Mail.ru</provider>
+		<url>http://foto.mail.ru</url>
+		<regex_url><![CDATA[http:\/\/foto\.mail\.ru\/mail\/[\w.\-]+\/[\w.\-]+\/\d+]]></regex_url>
+		<regex_scrape><![CDATA[var fotoP = \"http://content.foto.mail.ru/mail/([\w.\-/]+)\.jpg\";]]></regex_scrape>
+		<embed><![CDATA[<a href="{vb:raw url}" target="_blank" rel="nofollow"><img src="http://content.foto.mail.ru/mail/{vb:raw code}.jpg" rel="nofollow"></a>]]></embed>
+		<priority>45</priority>
+	</def>
+	<def>
+		<providerid>11</providerid>
+		<tagoption>letmegoogle</tagoption>
+		<provider>Поиск Google</provider>
+		<url>http://lmgtfy.com</url>
+		<regex_url><![CDATA[http:\/\/www\.google\.[\w]+/(?:\#|search\?).+(?:&q=)([\w%+.\-]+)]]></regex_url>
 		<regex_scrape />
-		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="576" height="432" data="http://www.facebook.com/v/{vb:raw code}">
-	<param name="movie" value="http://www.facebook.com/v/{vb:raw code}" />
-	<param name="wmode" value="transparent" />
+		<embed><![CDATA[<a href="http://letmegooglethatforyou.com/?q={vb:raw code}" target="_blank" rel="nofollow">смотрите, что умеет поиск...</a>]]></embed>
+		<priority>30</priority>
+	</def>
+	<def>
+		<providerid>12</providerid>
+		<tagoption>prostopleer</tagoption>
+		<provider>Просто Плеер</provider>
+		<url>http://prostopleer.com</url>
+		<regex_url><![CDATA[http:\/\/prostopleer\.com/tracks\/([\w]+)]]></regex_url>
+		<regex_scrape />
+		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="411" height="28" data="http://embed.prostopleer.com/track?id={vb:raw code}">
+	<param name="movie" value="http://embed.prostopleer.com/track?id={vb:raw code}" />
 </object>]]></embed>
-		<priority>0</priority>
+		<priority>25</priority>
+	</def>
+	<def>
+		<providerid>13</providerid>
+		<tagoption>rutube</tagoption>
+		<provider>RuTube</provider>
+		<url>http://rutube.ru</url>
+		<regex_url><![CDATA[http://rutube\.ru/tracks/[\d]+\.html\?.*v=([\w]+)]]></regex_url>
+		<regex_scrape />
+		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="640" height="360" data="http://video.rutube.ru/{vb:raw code}">
+	<param name="movie" value="http://video.rutube.ru/{vb:raw code}" />
+	<param name="wmode" value="transparent" />
+	<param name="allowFullScreen" value="true" />
+</object>]]></embed>
+		<priority>10</priority>
+	</def>
+	<def>
+		<providerid>14</providerid>
+		<tagoption>videomailru</tagoption>
+		<provider>Видео Mail.ru</provider>
+		<url>http://video.mail.ru</url>
+		<regex_url><![CDATA[http:\/\/video\.mail\.ru\/mail\/[\w.\-]+\/[\w.\-]+\/\d+\.html]]></regex_url>
+		<regex_scrape><![CDATA[DefswfURL=\"http://img\.mail\.ru/r/video2/player_v2.swf\?ver=10&par=http://content\.video\.mail\.ru/mail([\w.\-\/\$]*)\"]]></regex_scrape>
+		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="640" height="360" data="http://img.mail.ru/r/video2/player_v2.swf?ver=10&par=http://content.video.mail.ru/mail{vb:raw code}">
+	<param name="wmode" value="transparent" />
+	<param name="allowFullScreen" value="true" />
+	<param name="movie" value="http://img.mail.ru/r/video2/player_v2.swf?ver=10&par=http://content.video.mail.ru/mail{vb:raw code}" />
+	<param name="scale" value="noscale" />
+	<param name="menu" value="false" />
+</object>]]></embed>
+		<priority>40</priority>
+	</def>
+	<def>
+		<providerid>15</providerid>
+		<tagoption>yandexfotki</tagoption>
+		<provider>Яндекс Фотки</provider>
+		<url>http://fotki.yandex.ru</url>
+		<regex_url><![CDATA[http://fotki.yandex.ru/(?:top\/)?users/[\w.\-]+/view/\d+/]]></regex_url>
+		<regex_scrape><![CDATA[\[img\]http://img-fotki.yandex.ru/get/([\w.\-\/]+)_(?:XS|S|M|L|XL|)\.jpg\[/img\]]]></regex_scrape>
+		<embed><![CDATA[<a href="{vb:raw url}" target="_blank" rel="nofollow"><img src="http://img-fotki.yandex.ru/get/{vb:raw code}_S.jpg" rel="nofollow"></a>]]></embed>
+		<priority>15</priority>
 	</def>
 </AME3>
