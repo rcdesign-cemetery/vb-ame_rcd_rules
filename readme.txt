@@ -12,7 +12,7 @@ This repository track current changes at http://forum.rcdesign.ru
 Links:
 ------
 
-AME - http://www.vbulletin.org/forum/showthread.php?t=202476
-DJ's pack - http://www.vbulletin.org/forum/showthread.php?t=195884
+AME - http://www.vbulletin.org/forum/showthread.php?t=230707
+DJ's pack - http://www.vbulletin.org/forum/showthread.php?t=195884 (outdated)
 
 
