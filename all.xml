@@ -1,207 +1,152 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<AME>
-	<item>
-		<id>42</id>
-		<title>YouTube (HQ/HD)</title>
-		<description><![CDATA[Embed YouTube.com High Quality and High Definition Videos <b>(fmt=18& or fmt=22&)</b>]]></description>
-		<displayorder>1</displayorder>
-		<findcode><![CDATA[http://[\w]+\.youtube\.[\w]+/watch\?fmt=([18|22]+)&[amp;]*v=([\w-]+)[\w&;=]*[\#t=]*(\d*)s?]]></findcode>
-		<replacecode><![CDATA[<object width="$ameinfo[width]" height="$ameinfo[height]">
-      <param name="movie" value="http://www.youtube.com/v/$p2&hl=en&fs=1&rel=0&ap=%2526fmt%3D$p1&start=$p2"></param>
-      <param name="allowFullScreen" value="true"></param>
-      <param name="allowscriptaccess" value="always"></param>
-      <embed src="http://www.youtube.com/v/$p2&hl=en&fs=1&rel=0&ap=%2526fmt%3D$p1&start=$p2" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="$ameinfo[width]" height="$ameinfo[height]"></embed></object>]]></replacecode>
-		<status>1</status>
-		<container>1</container>
-		<embedregexp />
-		<extraction>1</extraction>
-		<gdef>0</gdef>
-		<ameid>youtube_hqhd</ameid>
-		<validation />
-	</item>
-	<item>
-		<id>41</id>
-		<title>You  Tube</title>
-		<description>Automatically youtubes your entries!</description>
-		<displayorder>10</displayorder>
-		<findcode><![CDATA[http://[\w]+\.youtube\.[\w]+/watch\?v=([\w-]+)[\w&;=]*[\#t=]*([\d]*)s?]]></findcode>
-		<replacecode><![CDATA[<object width="$ameinfo[width]" height="$ameinfo[height]"><param name="movie" value="http://www.youtube.com/v/$p1&start=$p2"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/$p1&start=$p2" type="application/x-shockwave-flash" allowfullscreen="true" width="$ameinfo[width]" height="$ameinfo[height]" wmode="transparent"></embed></object>]]></replacecode>
-		<status>1</status>
-		<container>1</container>
-		<embedregexp />
-		<extraction>1</extraction>
-		<gdef>0</gdef>
-		<ameid>youtube</ameid>
-		<validation />
-	</item>
-	<item>
-		<id>40</id>
-		<title>Vimeo</title>
-		<description>Embed Vimeo.com Videos!</description>
-		<displayorder>1</displayorder>
-		<findcode><![CDATA[http://[w\.]*vimeo\.com/([0-9]+)[&\w;=?+_\-%\/]*]]></findcode>
-		<replacecode><![CDATA[<object type="application/x-shockwave-flash" width="$ameinfo[width]" height="$ameinfo[height]" data="http://vimeo.com/moogaloop.swf?clip_id=$p1&amp;server=vimeo.com&amp;fullscreen=1&amp;video_info=1">	<param name="quality" value="best"><param name="allowfullscreen" value="true"><param name="scale" value="showAll"><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=$p1&amp;server=vimeo.com&amp;fullscreen=1&amp;video_info=1"></object>]]></replacecode>
-		<status>1</status>
-		<container>1</container>
-		<embedregexp />
-		<extraction>1</extraction>
-		<gdef>0</gdef>
-		<ameid>vimeo</ameid>
-		<validation />
-	</item>
-	<item>
-		<id>39</id>
-		<title>Video.Mail.Ru</title>
-		<description>Embed Video.Mail.Ru Videos!</description>
-		<displayorder>1</displayorder>
-		<findcode><![CDATA[http://video\.mail\.ru/([\w]+)/([\w\.]+)/(\w+)/(\d+)\.html[\w\?=]*]]></findcode>
-		<replacecode><![CDATA[<object width="$ameinfo[width]" height="$ameinfo[height]">
-  <param name="allowScriptAccess" value="always" />
-  <param name="movie" value="http://img.mail.ru/r/video2/player_v2.swf?par=http://content.video.mail.ru/$p1/$p2/$p3/\$$p4&page=11&imaginehost=video.mail.ru&perlhost=video.mail.ru&alias=$p1&username=$p2&albumid=$p3&id=$p4" />
-  <embed src="http://img.mail.ru/r/video2/player_v2.swf?par=http://content.video.mail.ru/$p1/$p2/$p3/\$$p4&page=11&imaginehost=video.mail.ru&perlhost=video.mail.ru&alias=$p1&username=$p2&albumid=$p3&id=$p4" type="application/x-shockwave-flash" width="$ameinfo[width]" height="$ameinfo[height]" allowScriptAccess="always"></embed>
-</object>]]></replacecode>
-		<status>1</status>
-		<container>1</container>
-		<embedregexp />
-		<extraction>0</extraction>
-		<gdef>0</gdef>
-		<ameid>videomailru</ameid>
-		<validation />
-	</item>
-	<item>
-		<id>38</id>
-		<title>RuTube</title>
-		<description>Embed RuTube.ru Videos!</description>
-		<displayorder>1</displayorder>
-		<findcode><![CDATA[http://rutube\.ru/tracks/[\d]+\.html\?[posuer&am;\d=]*v=([\w]+)]]></findcode>
-		<replacecode><![CDATA[<object width="$ameinfo[width]" height="$ameinfo[height]"><param name="movie" value="http://video.rutube.ru/$p1"></param><param name="wmode" value="window"></param><param name="allowFullScreen" value="true"></param><embed src="http://video.rutube.ru/$p1" type="application/x-shockwave-flash" wmode="window" width="$ameinfo[width]" height="$ameinfo[height]" allowFullScreen="true" ></embed></object>]]></replacecode>
-		<status>1</status>
-		<container>1</container>
-		<embedregexp />
-		<extraction>0</extraction>
-		<gdef>0</gdef>
-		<ameid>rutube</ameid>
-		<validation />
-	</item>
-	<item>
-		<id>37</id>
-		<title>Rambler Foto</title>
-		<description>Embed photos from Rambler albums</description>
-		<displayorder>0</displayorder>
-		<findcode><![CDATA[http://foto\.rambler\.ru/users/([\w+-/]*)/([\w+-]*)/]]></findcode>
-		<replacecode><![CDATA[<a href="$p0" target="_blank" rel="nofollow"><img class="thumbnail" border="0" src="http://foto.rambler.ru/public/$p1/$p2/$p2-prev.jpg" rel="nofollow"></a>]]></replacecode>
-		<status>1</status>
-		<container>0</container>
-		<embedregexp />
-		<extraction>0</extraction>
-		<gdef>0</gdef>
-		<ameid>rambler_photo</ameid>
-		<validation />
-	</item>
-	<item>
-		<id>36</id>
-		<title>PhotoFile@RU</title>
-		<description>Embed photo from photofile.ru albums</description>
-		<displayorder>0</displayorder>
-		<findcode><![CDATA[http://photofile\.ru/users/([\w+-]+)/(\d+)/(\d+)/(#mainImageLink)?]]></findcode>
-		<replacecode><![CDATA[<a href="$p0" target="_blank" rel="nofollow"><img class="thumbnail" border="0" src="http://photofile.ru/photo/$p1/$p2/middle/$p3.jpg" rel="nofollow"></a>]]></replacecode>
-		<status>1</status>
-		<container>0</container>
-		<embedregexp />
-		<extraction>0</extraction>
-		<gdef>0</gdef>
-		<ameid>photofile</ameid>
-		<validation />
-	</item>
-	<item>
-		<id>35</id>
-		<title>Meta Cafe</title>
-		<description>Embed MetaCafe.com Videos!</description>
-		<displayorder>1</displayorder>
-		<findcode><![CDATA[[http://]*[a-z]*?[\.]?metacafe\.com/watch/([0-9]+/[a-z0-9_]*)[&a-z0-9;=\+_\-\/]*]]></findcode>
-		<replacecode><![CDATA[<embed src="http://www.metacafe.com/fplayer/$p1.swf" width="$ameinfo[width]" height="$ameinfo[height]" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed>]]></replacecode>
-		<status>1</status>
-		<container>1</container>
-		<embedregexp />
-		<extraction>1</extraction>
-		<gdef>0</gdef>
-		<ameid>meta_cafe</ameid>
-		<validation />
-	</item>
-	<item>
-		<id>34</id>
-		<title>Let me google that for you :)</title>
-		<description>Funny google searsh results rederect</description>
-		<displayorder>0</displayorder>
-		<findcode><![CDATA[http://www\.google\.[\w]+/search\?.+(?:&|&amp;)(q=[\w\d%+]+).*]]></findcode>
-		<replacecode><![CDATA[<a href="http://letmegooglethatforyou.com/?{$p1}" target="_blank" rel="nofollow">google rulezzz!!!</a>]]></replacecode>
-		<status>1</status>
-		<container>0</container>
-		<embedregexp />
-		<extraction>0</extraction>
-		<gdef>0</gdef>
-		<ameid>letmegooglethatforyou</ameid>
-		<validation />
-	</item>
-	<item>
-		<id>33</id>
-		<title>Google Video</title>
-		<description><![CDATA[Converts Google.com Videos! <b>(Google Hosted Only)</b>]]></description>
-		<displayorder>1</displayorder>
-		<findcode><![CDATA[[http://]*video\.google\.[\w.]+/videoplay\?docid=([-\d]+)[&\w;=\+_-]*]]></findcode>
-		<replacecode><![CDATA[<embed style="width:$ameinfo[width]px; height:$ameinfo[height]px;" id="VideoPlayback" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=$p1" flashvars="" wmode="transparent"> </embed>]]></replacecode>
-		<status>1</status>
-		<container>1</container>
-		<embedregexp />
-		<extraction>1</extraction>
-		<gdef>0</gdef>
-		<ameid>google_video</ameid>
-		<validation />
-	</item>
-	<item>
-		<id>32</id>
-		<title>Google Maps</title>
-		<description>Embed Google Maps</description>
-		<displayorder>0</displayorder>
-		<findcode><![CDATA[http://maps\.google\.[\w]+/maps.*]]></findcode>
-		<replacecode><![CDATA[<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{$p0}&amp;output=embed"></iframe>]]></replacecode>
-		<status>1</status>
-		<container>1</container>
-		<embedregexp />
-		<extraction>0</extraction>
-		<gdef>0</gdef>
-		<ameid>google_maps</ameid>
-		<validation />
-	</item>
-	<item>
-		<id>31</id>
-		<title>Foto@Mail.ru</title>
-		<description>Embed photo from mail.ru albums</description>
-		<displayorder>0</displayorder>
-		<findcode><![CDATA[http://foto\.mail\.ru/([\w+-/]+)/(\d+).html]]></findcode>
-		<replacecode><![CDATA[<a href="$p0" target="_blank" rel="nofollow"><img class="thumbnail" border="0" src="http://content.foto.mail.ru/$p1/p-$p2.jpg" rel="nofollow"></a>]]></replacecode>
-		<status>1</status>
-		<container>0</container>
-		<embedregexp />
-		<extraction>0</extraction>
-		<gdef>0</gdef>
-		<ameid>foto_mailru</ameid>
-		<validation />
-	</item>
-	<item>
-		<id>44</id>
-		<title>ProstoPleer</title>
-		<description>Embed prostppleer.com mp3 pleer</description>
-		<displayorder>0</displayorder>
-		<findcode><![CDATA[http://prostopleer\.com/tracks/([\w]+)]]></findcode>
-		<replacecode><![CDATA[<object width="411" height="28"><param name="movie" value="http://embed.prostopleer.com/track?id=$p1"></param><embed src="http://embed.prostopleer.com/track?id=$p1" type="application/x-shockwave-flash" width="411" height="28"></embed></object>]]></replacecode>
-		<status>1</status>
-		<container>0</container>
-		<embedregexp />
-		<extraction>0</extraction>
-		<gdef>0</gdef>
-		<ameid>prostopleer</ameid>
-		<validation />
-	</item>
-</AME>
+<AME3>
+	<def>
+		<providerid>10</providerid>
+		<tagoption>fotorambler</tagoption>
+		<provider>Рамблер Фото</provider>
+		<url>http://foto.rambler.ru/</url>
+		<regex_url><![CDATA[http:\/\/foto\.rambler\.ru\/users\/[\w+\-]+\/\d+\/[\w+\-]+\/]]></regex_url>
+		<regex_scrape><![CDATA[var inpicpreview='http://foto.rambler.ru/public/([\w+\-/]+)-prev\.jpg';]]></regex_scrape>
+		<embed><![CDATA[<a href="{vb:raw url}" target="_blank"><img src="http://foto.rambler.ru/public/{vb:raw code}-prev.jpg" target="_blank" rel="nofollow"></a>]]></embed>
+		<priority>50</priority>
+	</def>
+	<def>
+		<providerid>2</providerid>
+		<tagoption>youtube</tagoption>
+		<provider>YouTube</provider>
+		<url>http://www.youtube.com</url>
+		<regex_url><![CDATA[http:\/\/www\.youtube\.com\/watch\?.*v=([a-z0-9-_]+)]]></regex_url>
+		<regex_scrape />
+		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="640" height="385" data="http://www.youtube.com/v/{vb:raw code}&fs=1">
+	<param name="movie" value="http://www.youtube.com/v/{vb:raw code}&fs=1" />
+	<param name="wmode" value="transparent" />
+	<param name="allowFullScreen" value="true" />
+</object>]]></embed>
+		<priority>1</priority>
+	</def>
+	<def>
+		<providerid>3</providerid>
+		<tagoption>vimeo</tagoption>
+		<provider>Vimeo</provider>
+		<url>http://www.vimeo.com</url>
+		<regex_url><![CDATA[http:\/\/(?:www\.)?vimeo\.com\/([0-9]+)]]></regex_url>
+		<regex_scrape />
+		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="640" height="360" data="http://vimeo.com/moogaloop.swf?clip_id={vb:raw code}">
+	<param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id={vb:raw code}" />
+	<param name="wmode" value="transparent" />
+	<param name="allowfullscreen" value="true" />
+</object>]]></embed>
+		<priority>5</priority>
+	</def>
+	<def>
+		<providerid>8</providerid>
+		<tagoption>googlemaps</tagoption>
+		<provider>Google Maps</provider>
+		<url>http://maps.google.com</url>
+		<regex_url>http:\/\/maps\.google\.(?:com|ru)\/maps(.)(.*)</regex_url>
+		<regex_scrape />
+		<embed><![CDATA[<iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{vb:raw url}&amp;output=embed"></iframe><br /><small><a href="{vb:raw url}" target="_blank">Просмотреть увеличенную карту</a></small>]]></embed>
+		<priority>20</priority>
+	</def>
+	<def>
+		<providerid>5</providerid>
+		<tagoption>metacafe</tagoption>
+		<provider>Metacafe</provider>
+		<url>http://www.metacafe.com</url>
+		<regex_url><![CDATA[http:\/\/www\.metacafe\.com\/watch\/([0-9a-z_\-\/]+)]]></regex_url>
+		<regex_scrape />
+		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="400" height="345" data="http://www.metacafe.com/fplayer/{vb:raw code}.swf">
+	<param name="movie" value="http://www.metacafe.com/fplayer/{vb:raw code}.swf" />
+	<param name="wmode" value="transparent" />
+	<param name="allowFullScreen" value="true" />
+</object>]]></embed>
+		<priority>35</priority>
+	</def>
+	<def>
+		<providerid>6</providerid>
+		<tagoption>google</tagoption>
+		<provider>Google Video</provider>
+		<url>http://video.google.com</url>
+		<regex_url><![CDATA[http:\/\/video\.google\.com\/videoplay\?docid=([0-9\-]+)]]></regex_url>
+		<regex_scrape />
+		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="400" height="326" data="http://video.google.com/googleplayer.swf?docid={vb:raw code}">
+	<param name="movie" value="http://video.google.com/googleplayer.swf?docid={vb:raw code}" />
+	<param name="wmode" value="transparent" />
+	<param name="allowFullScreen" value="true" />
+</object>]]></embed>
+		<priority>55</priority>
+	</def>
+	<def>
+		<providerid>9</providerid>
+		<tagoption>fotomailru</tagoption>
+		<provider>Фото Mail.ru</provider>
+		<url>http://foto.mail.ru</url>
+		<regex_url><![CDATA[http:\/\/foto\.mail\.ru\/mail\/[\w.\-]+\/[\w.\-]+\/\d+]]></regex_url>
+		<regex_scrape><![CDATA[var fotoP = \"http://content.foto.mail.ru/mail/([\w.\-/]+)\.jpg\";]]></regex_scrape>
+		<embed><![CDATA[<a href="{vb:raw url}" target="_blank" rel="nofollow"><img src="http://content.foto.mail.ru/mail/{vb:raw code}.jpg" rel="nofollow"></a>]]></embed>
+		<priority>45</priority>
+	</def>
+	<def>
+		<providerid>11</providerid>
+		<tagoption>letmegoogle</tagoption>
+		<provider>Поиск Google</provider>
+		<url>http://lmgtfy.com</url>
+		<regex_url><![CDATA[http:\/\/www\.google\.[\w]+/(?:\#|search\?).+(?:&q=)([\w%+.\-]+)]]></regex_url>
+		<regex_scrape />
+		<embed><![CDATA[<a href="http://letmegooglethatforyou.com/?q={vb:raw code}" target="_blank" rel="nofollow">смотрите, что умеет поиск...</a>]]></embed>
+		<priority>30</priority>
+	</def>
+	<def>
+		<providerid>12</providerid>
+		<tagoption>prostopleer</tagoption>
+		<provider>Просто Плеер</provider>
+		<url>http://prostopleer.com</url>
+		<regex_url><![CDATA[http:\/\/prostopleer\.com/tracks\/([\w]+)]]></regex_url>
+		<regex_scrape />
+		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="411" height="28" data="http://embed.prostopleer.com/track?id={vb:raw code}">
+	<param name="movie" value="http://embed.prostopleer.com/track?id={vb:raw code}" />
+</object>]]></embed>
+		<priority>25</priority>
+	</def>
+	<def>
+		<providerid>13</providerid>
+		<tagoption>rutube</tagoption>
+		<provider>RuTube</provider>
+		<url>http://rutube.ru</url>
+		<regex_url><![CDATA[http://rutube\.ru/tracks/[\d]+\.html\?.*v=([\w]+)]]></regex_url>
+		<regex_scrape />
+		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="640" height="360" data="http://video.rutube.ru/{vb:raw code}">
+	<param name="movie" value="http://video.rutube.ru/{vb:raw code}" />
+	<param name="wmode" value="transparent" />
+	<param name="allowFullScreen" value="true" />
+</object>]]></embed>
+		<priority>10</priority>
+	</def>
+	<def>
+		<providerid>14</providerid>
+		<tagoption>videomailru</tagoption>
+		<provider>Видео Mail.ru</provider>
+		<url>http://video.mail.ru</url>
+		<regex_url><![CDATA[http:\/\/video\.mail\.ru\/mail\/[\w.\-]+\/[\w.\-]+\/\d+\.html]]></regex_url>
+		<regex_scrape><![CDATA[DefswfURL=\"http://img\.mail\.ru/r/video2/player_v2.swf\?ver=10&par=http://content\.video\.mail\.ru/mail([\w.\-\/\$]*)\"]]></regex_scrape>
+		<embed><![CDATA[<object class="restrain" type="application/x-shockwave-flash" width="640" height="360" data="http://img.mail.ru/r/video2/player_v2.swf?ver=10&par=http://content.video.mail.ru/mail{vb:raw code}">
+	<param name="wmode" value="transparent" />
+	<param name="allowFullScreen" value="true" />
+	<param name="movie" value="http://img.mail.ru/r/video2/player_v2.swf?ver=10&par=http://content.video.mail.ru/mail{vb:raw code}" />
+	<param name="scale" value="noscale" />
+	<param name="menu" value="false" />
+</object>]]></embed>
+		<priority>40</priority>
+	</def>
+	<def>
+		<providerid>15</providerid>
+		<tagoption>yandexfotki</tagoption>
+		<provider>Яндекс Фотки</provider>
+		<url>http://fotki.yandex.ru</url>
+		<regex_url><![CDATA[http://fotki.yandex.ru/(?:top\/)?users/[\w.\-]+/view/\d+/]]></regex_url>
+		<regex_scrape><![CDATA[\[img\]http://img-fotki.yandex.ru/get/([\w.\-\/]+)_(?:XS|S|M|L|XL|)\.jpg\[/img\]]]></regex_scrape>
+		<embed><![CDATA[<a href="{vb:raw url}" target="_blank" rel="nofollow"><img src="http://img-fotki.yandex.ru/get/{vb:raw code}_S.jpg" rel="nofollow"></a>]]></embed>
+		<priority>15</priority>
+	</def>
+</AME3>
