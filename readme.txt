@@ -1,6 +1,8 @@
 Description:
 ------------
 
+!!! Need fix: http://tracker.vbulletin.com/browse/VBIV-8604
+
 vB AME rules to beautify links for video, photo hostings and so on. Import via AME CP.
 This repository track current changes at http://forum.rcdesign.ru
 
