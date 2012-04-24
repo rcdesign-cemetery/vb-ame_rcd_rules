@@ -6,7 +6,7 @@
 		<tagoption>youtube</tagoption>
 		<provider>YouTube</provider>
 		<url>http://www.youtube.com</url>
-		<regex_url><![CDATA[http:\/\/(?:www\.)?youtube\.com\/watch\?.*v=([\w-]+)[\w&;=]*[\#t=]*([\d]*)s?]]></regex_url>
+		<regex_url><![CDATA[https?:\/\/(?:www\.)?youtube\.com\/watch\?.*v=([\w-]+)[\w&;=]*[\#t=]*([\d]*)s?]]></regex_url>
 		<regex_scrape />
 		<embed><![CDATA[<iframe width="640" height="390" src="//www.youtube.com/embed/{vb:raw code}?hd=1" frameborder="0" allowfullscreen></iframe>]]></embed>
 		<priority>1</priority>
@@ -140,5 +140,15 @@
 		<regex_scrape />
 		<embed><![CDATA[<iframe src="http://player.vimeo.com/video/{vb:raw code}?portrait=0" width="640" height="360" frameborder="0"></iframe>]]></embed>
 		<priority>5</priority>
+	</def>
+	<def>
+		<providerid>20</providerid>
+		<tagoption>youtube_short</tagoption>
+		<provider>YouTu.Be</provider>
+		<url>http://www.youtube.com</url>
+		<regex_url><![CDATA[https?:\/\/youtu\.be\/([\w-]+)(?:\?.*)?]]></regex_url>
+		<regex_scrape />
+		<embed><![CDATA[<iframe width="640" height="390" src="//www.youtube.com/embed/{vb:raw code}?hd=1" frameborder="0" allowfullscreen></iframe>]]></embed>
+		<priority>0</priority>
 	</def>
 </AME3>
